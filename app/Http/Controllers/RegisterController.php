@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -13,6 +14,11 @@ class RegisterController extends Controller
   function register(Request $request)
   {
     $input = $request->all();
+
+
+
+
+
 
     $validator = Validator::make($request->all(), [
       'name' => 'required|min:5',
