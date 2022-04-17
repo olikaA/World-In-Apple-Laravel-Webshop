@@ -6,6 +6,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+<p style="background-color:red, color:white"><b>
+## This reference is made by: Oliver Janko.
+
+The webshop has a reference value only, it was created for non-commercial purposes.
+
+I am not a reseller of Apple Inc. 
+
+All credits of used pictures are going to the uploader(s).
+
+Use of the website for commercial purposes is prohibited!
+
+</p></b>
 
 ## About Laravel
 
