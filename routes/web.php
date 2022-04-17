@@ -28,6 +28,8 @@ Route::get("/", [ProductController::class, 'index']);
 Route::get("detail/{id}", [ProductController::class, 'detail']);
 Route::post('/add_to_cart', [ProductController::class, 'addtocart']);
 Route::get("cart", [ProductController::class, 'cart', 'viewcart']);
+Route::get("orders", [ProductController::class, 'orders']);
+
 Route::get('/register', function () {
   if (Session::has('user')) {
     return redirect('/');
@@ -41,4 +43,3 @@ Route::get('/devices', [ProductController::class, 'devices']);
 Route::get("removecart/{id}", [ProductController::class, 'removecart']);
 Route::get("checkout", [ProductController::class, 'checkout']);
 Route::post("checkoutplace", [ProductController::class, 'checkoutplace']);
-Route::get("orders", [ProductController::class, 'orders']);
