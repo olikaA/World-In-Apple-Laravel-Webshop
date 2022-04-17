@@ -5,7 +5,7 @@ if(Session::has('user'))
 {
   $total = ProductController::cartItem();
 }
- ?>
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="/">World in Apple</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +29,10 @@ if(Session::has('user'))
 
 
 
-      </ul>
+    </ul>
 
   </div>
-@if(Session::has('user'))
+  @if(Session::has('user'))
   <div class="dropdown show">
     <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{Session::get('user')['name']}}
@@ -44,14 +44,14 @@ if(Session::has('user'))
     </div>
   </div>
 
-    @else
+  @else
 
 
-      <a class="nav-link" style="color:inherit;" href="/login">Login</a>
-      <a class="nav-link" style="color:inherit;" href="/register">Register</a>
+  <a class="nav-link" style="color:inherit;" href="/login">Login</a>
+  <a class="nav-link" style="color:inherit;" href="/register">Register</a>
 
 
 
 
-    @endif
+  @endif
 </nav>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>World In Apple</title>
-    <!doctype html>
-<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>World In Apple</title>
+  <!doctype html>
+  <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -24,122 +24,122 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
-</html>
-  </head>
+  </html>
+</head>
 
-  <body>
+<body>
 
-      {{View::make('header')}}
+  {{View::make('header')}}
 
-      @yield('content')
+  @yield('content')
 
-      {{View::make('footer')}}
+  {{View::make('footer')}}
 
-  </body>
+</body>
 <style>
-  html{
-    position:relative;
-    margin:auto;
-    max-height:100%;
-	   max-width:100%;
-  }
-  .container-with-height{
-    height: 1000px;
-    padding-top: 100px;
-    color: white;
+html{
+  position:relative;
+  margin:auto;
+  max-height:100%;
+  max-width:100%;
+}
+.container-with-height{
+  height: 1000px;
+  padding-top: 100px;
+  color: white;
 
 
-  }
-  .img-fluid{
-    height: 400px;
+}
+.img-fluid{
+  height: 400px;
 
-  }
-  .detail{
-    max-height: 600px;
-    height: auto;
-    overflow:hidden;
-  }
-  .promo{
-    line-height: 30px;
-    padding: 10px;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    border-style: solid;
-    border-color: grey;
-    border-radius: 5px;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 10%;
-    color: white;
-  }
-  .desc{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .name{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .price{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+}
+.detail{
+  max-height: 600px;
+  height: auto;
+  overflow:hidden;
+}
+.promo{
+  line-height: 30px;
+  padding: 10px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 10%;
+  color: white;
+}
+.desc{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.name{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.price{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
-  .button-container{
-    padding-bottom: 7%;
-    padding-top: 3%
-  }
-  .section{
-    padding-right: 2%;
-  }
-  .smallpic{
-    max-width: 150px;
-    height: auto;
-    overflow:hidden;
-  }
-  .smallerpic{
-    max-width: 70px;
-    height: auto;
-    overflow:hidden;
-  }
-  .products{
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-  .productsfinal{
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    margin-left: 30%;
-    margin-right: 30%;
-  }
-  .total{
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-  .mainpageproduct{
-    max-height: 400px;
-    height: auto;
-    overflow:hidden;
-  }
-  .orderform{
-    padding-left: 30%;
-    padding-right: 30%;
-  }
-  .successholder{
-    background-color: black;
-    padding: 1%;
-    color: white;
-    border-bottom: solid grey 1px;
+.button-container{
+  padding-bottom: 7%;
+  padding-top: 3%
+}
+.section{
+  padding-right: 2%;
+}
+.smallpic{
+  max-width: 150px;
+  height: auto;
+  overflow:hidden;
+}
+.smallerpic{
+  max-width: 70px;
+  height: auto;
+  overflow:hidden;
+}
+.products{
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.productsfinal{
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.total{
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.mainpageproduct{
+  max-height: 400px;
+  height: auto;
+  overflow:hidden;
+}
+.orderform{
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.successholder{
+  background-color: black;
+  padding: 1%;
+  color: white;
+  border-bottom: solid grey 1px;
 
-  }
-  .footer-container
-  {
-    color: white;
-    padding: 1%;
-  }
+}
+.footer-container
+{
+  color: white;
+  padding: 1%;
+}
 </style>
 </html>

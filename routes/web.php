@@ -17,7 +17,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/login', function () {
-    return view('login');
+  return view('login');
 });
 Route::get('/logout', function () {
   Session::forget('user');
@@ -30,9 +30,9 @@ Route::post('/add_to_cart', [ProductController::class, 'addtocart']);
 Route::get("cart", [ProductController::class, 'cart', 'viewcart']);
 Route::get('/register', function () {
   if (Session::has('user')) {
-      return redirect('/');
-    }
-    else {
+    return redirect('/');
+  }
+  else {
     return view('register');
   }
 });
@@ -42,8 +42,3 @@ Route::get("removecart/{id}", [ProductController::class, 'removecart']);
 Route::get("checkout", [ProductController::class, 'checkout']);
 Route::post("checkoutplace", [ProductController::class, 'checkoutplace']);
 Route::get("orders", [ProductController::class, 'orders']);
-
-if (Session::has('user')) {
-  $asd = 0;
-  return $asd;
-}
