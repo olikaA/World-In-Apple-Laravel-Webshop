@@ -5,6 +5,9 @@
 
 <body style="background-color:#141414;">
   <div class="container-with-height">
+    <h5 class="text-center">Register</h5>
+    <br>
+    <br>
     <div class="container d-flex justify-content-center">
       <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
         <div class="form-group">

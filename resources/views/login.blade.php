@@ -9,11 +9,17 @@
 
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <h5 class="text-center">Login</h5>
+    <br>
+    <br>
+
+
     <div class="container d-flex justify-content-center">
       <form action="{{route('login')}}" method="POST">
         <div class="form-group">
           @csrf
-          
+
 
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
