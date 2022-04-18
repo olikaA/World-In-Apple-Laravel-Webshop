@@ -27,6 +27,7 @@ Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::get("/", [ProductController::class, 'index']);
 Route::get("detail/{id}", [ProductController::class, 'detail']);
 Route::post('/add_to_cart', [ProductController::class, 'addtocart']);
+
 Route::get("cart", [ProductController::class, 'cart', 'viewcart']);
 Route::get("orders", [ProductController::class, 'orders']);
 
@@ -42,4 +43,10 @@ Route::post("/register", [RegisterController::class, 'register'])->name('registe
 Route::get('/devices', [ProductController::class, 'devices']);
 Route::get("removecart/{id}", [ProductController::class, 'removecart']);
 Route::get("checkout", [ProductController::class, 'checkout']);
+Route::get('/checkoutplace', function () {
+  return redirect('/');
+});
+Route::get('/add_to_cart', function () {
+  return redirect('/');
+});
 Route::post("checkoutplace", [ProductController::class, 'checkoutplace']);

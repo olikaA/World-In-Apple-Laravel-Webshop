@@ -79,67 +79,80 @@ class ProductController extends Controller
 
   function checkout()
   {
-    $userId= Session::get('user')['id'];
+    if (Session::has('user')) {
+      $userId= Session::get('user')['id'];
 
-    $total= DB::table('cart')
-    ->join('products','cart.product_id','=','products.id')
-    ->where('cart.user_id',$userId)
-    ->select('products.*', 'cart.id as cart_id')
-    ->sum('products.price');
+      $total= DB::table('cart')
+      ->join('products','cart.product_id','=','products.id')
+      ->where('cart.user_id',$userId)
+      ->select('products.*', 'cart.id as cart_id')
+      ->sum('products.price');
 
-    if ($total != 0) {
-      return view('checkout',['total'=>$total]);
+      if ($total != 0) {
+        return view('checkout',['total'=>$total]);
 
+      }
+      else {
+        $error_message = "Cart is empty.";
+        return view('cart', compact('error_message'));
+      }
     }
     else {
-      $error_message = "Cart is empty.";
-      return view('cart', compact('error_message'));
+      return redirect("/login");
     }
   }
 
+
   function checkoutplace(Request $req)
   {
-    $userId= Session::get('user')['id'];
-    $allcart= Cart::where('user_id', $userId)->get();
+      try {
+        $userId= Session::get('user')['id'];
+        $allcart= Cart::where('user_id', $userId)->get();
 
-    $total= DB::table('cart')
-    ->join('products','cart.product_id','=','products.id')
-    ->where('cart.user_id',$userId)
-    ->select('products.*', 'cart.id as cart_id')
-    ->sum('products.price');
-    $product = Product::all();
+        $total= DB::table('cart')
+        ->join('products','cart.product_id','=','products.id')
+        ->where('cart.user_id',$userId)
+        ->select('products.*', 'cart.id as cart_id')
+        ->sum('products.price');
+        $product = Product::all();
 
-    $validator = Validator::make($req->all(), [
-      'name' => 'required',
-      'address' => 'required',
-      'method' => 'required'
+        $validator = Validator::make($req->all(), [
+          'name' => 'required',
+          'address' => 'required',
+          'method' => 'required'
 
-    ]);
-    if ($validator->fails())
-    {
-      $error_message = "You haven't filled all required fields.";
-      return view('checkout', compact('error_message','total'));
-    }
+        ]);
+        if ($validator->fails())
+        {
+          $error_message = "You haven't filled all required fields.";
+          return view('checkout', compact('error_message','total'));
+        }
 
-    foreach ($allcart as $cart) {
-      $order = new Order;
-      $order->product_id=$cart['product_id'];
-      $order->user_id=$cart['user_id'];
-      $order->status="pending";
-      $order->payment_method=$req->method;
-      $order->payment_status="pending";
-      $order->address=$req->address;
-      $order->name=$req->name;
-      $order->save();
-      Cart::where('user_id', $userId)->delete();
-    }
-
-
+        foreach ($allcart as $cart) {
+          $order = new Order;
+          $order->product_id=$cart['product_id'];
+          $order->user_id=$cart['user_id'];
+          $order->status="pending";
+          $order->payment_method=$req->method;
+          $order->payment_status="pending";
+          $order->address=$req->address;
+          $order->name=$req->name;
+          $order->save();
+          Cart::where('user_id', $userId)->delete();
+        }
 
 
-    $req->input();
-    $successmessage =  0;
-    return view('product', compact('successmessage','product'));
+
+
+        $req->input();
+        $successmessage =  0;
+        return view('product', compact('successmessage','product'));
+
+      } catch (\Exception $e) {
+        return redirect('/');
+      }
+
+
 
 
   }
