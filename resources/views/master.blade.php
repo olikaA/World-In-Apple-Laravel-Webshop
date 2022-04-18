@@ -145,6 +145,8 @@ max-width:100%;
   color: white;
   padding-top: 5%;
   padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 </style>
 </html>
