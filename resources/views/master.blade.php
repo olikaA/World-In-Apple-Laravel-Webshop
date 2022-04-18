@@ -9,7 +9,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
@@ -27,27 +27,31 @@
   </html>
 </head>
 
-<body>
 
-  {{View::make('header')}}
 
-  @yield('content')
+{{View::make('header')}}
 
-  {{View::make('footer')}}
 
-</body>
+@yield('content')
+
+
+{{View::make('footer')}}
+
+
 <style>
-html{
-  position:relative;
-  margin:auto;
-  max-height:100%;
-  max-width:100%;
-}
-.container-with-height{
-  height: 1000px;
-  padding-top: 100px;
-  color: white;
+/* html{
+position:relative;
+margin:auto;
+max-height:100%;
+max-width:100%;
+} */
 
+
+.container-with-height{
+  min-height: 700px;
+  padding-top: 5%;
+  color: white;
+  margin-bottom: 5%;
 
 }
 .img-fluid{
@@ -139,7 +143,8 @@ html{
 .footer-container
 {
   color: white;
-  padding: 1%;
+  padding-top: 5%;
+  padding-bottom: 1%;
 }
 </style>
 </html>

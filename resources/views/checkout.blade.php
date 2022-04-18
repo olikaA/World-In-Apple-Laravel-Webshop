@@ -55,12 +55,6 @@
       <?php endif; ?>
 
     </div>
-
-
-
-
-
-
   </div>
-  @endsection
 </body>
+@endsection
