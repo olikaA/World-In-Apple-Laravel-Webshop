@@ -21,8 +21,20 @@ class ProductController extends Controller
 
   function detail($id)
   {
-    $datas =  Product::find($id);
-    return view('detail',['datas'=>$datas]);
+
+
+        $datas =  Product::find($id);
+
+        if (is_null($datas)) {
+          return redirect("/devices");
+        }
+        else {
+          return view('detail',['datas'=>$datas]);
+        }
+
+
+
+
   }
 
   function addtocart(Request $req)
