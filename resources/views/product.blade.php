@@ -40,7 +40,7 @@
                 <p>{{$data->description}}</p>
               </div>
             </div>
-
+            </a>
           <?php endforeach; ?>
 
 

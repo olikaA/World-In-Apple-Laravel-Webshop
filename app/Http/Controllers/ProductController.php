@@ -128,12 +128,14 @@ class ProductController extends Controller
         ->sum('products.price');
         $product = Product::all();
 
-        $validator = Validator::make($req->all(), [
+        $validator = Validator::make($req->all(),
+        [
           'name' => 'required',
           'address' => 'required',
           'method' => 'required'
 
-        ]);
+        ]
+        );
         if ($validator->fails())
         {
           $error_message = "You haven't filled all required fields.";
