@@ -18,7 +18,7 @@ I am not a reseller of Apple Inc.
 
 All credits of used pictures are going to the uploader(s).
 
-Use of the website for commercial purposes is prohibited!
+Use of the website template for commercial purposes is prohibited!
 
 
 
